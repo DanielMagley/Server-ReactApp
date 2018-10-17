@@ -14,4 +14,6 @@ app.use(require("./middleware/headers"));
 app.use("/mdb/gameinfo", gameInfo);
 app.use("/mdb/user", user);
 
-app.listen(3000, () => console.log("App is listneing on 3000"));
+app.listen(process.env.PORT, () =>
+  console.log(`Server is listneing on port ${process.env.PORT}`)
+);

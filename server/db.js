@@ -1,7 +1,6 @@
 const Sequelize = require("sequelize");
 
-const sequelize = new Sequelize("serverproject", "postgres", "Postgres2035!", {
-  host: "localHost",
+const sequelize = new Sequelize(process.env.DATABASE_URL, {
   dialect: "postgres"
 });
 sequelize.authenticate().then(
